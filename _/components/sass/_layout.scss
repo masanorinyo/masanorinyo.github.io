@@ -1,0 +1,1381 @@
+//---------Susy setup---------//
+$total-columns:12;
+$column-width:4em;
+$gutter-width:1em;
+$grid-padding:$gutter-width;
+
+@include border-box-sizing;
+
+$small:20em;
+$medium:40em;
+$large:65em;
+
+//------------layout--------------//
+.layout{
+	@include container;
+	padding:5px 3%;
+}//layout
+
+
+.pages{
+	@include opacity(0);
+}//pages
+
+//------------Structure-------------//
+
+header{
+	
+	height:100%;
+	width:100%;
+	position:relative;
+	
+
+	.hero{
+		
+		@include background-image(
+			linear-gradient(left, white, black)
+		);//background image
+		@include background(
+			linear-gradient(bottom left,rgba($darkerblue,0.7),rgba($darkerblue,0.7)),
+			image-url('misc/building-sm.jpg')
+		);//background
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+		position:relative;
+		height:100%;
+		width:100%;
+		
+		span{
+			
+			font-size:0.7em;
+
+		}//span
+		
+		video{
+		
+			position: absolute; right: 0; bottom: 0;
+			min-width: 100%; min-height: 100%;
+			width: auto; height: auto; z-index: 1;
+			background-size: cover;
+			display:none;
+
+		}//video
+
+		#main_name{
+			
+			
+			width:70%;
+			height:20%;
+			position:absolute;
+			top:0;right:0;bottom: 0;left: 0;
+			margin:auto;
+			line-height:130%;
+			z-index:100;
+			font-size:1.5em;
+
+			span{
+				margin:0;
+				font-size:0.7em;
+			}
+			
+			@include at-breakpoint($medium){
+				
+				font-size:2.5em;
+
+			}//medium size layout
+
+			@include at-breakpoint($large){
+				
+				font-size:3.0em;	
+
+			}//large size layout
+		}//main name id
+
+		@include at-breakpoint($medium){
+			@include background-image(
+				linear-gradient(left, white, black)
+			);//background image
+			@include background(
+				linear-gradient(bottom left,rgba($darkerblue,0.7),rgba($darkerblue,0.7)),
+				image-url('misc/building-md.jpg')
+
+			);//background
+			background-size:cover;
+			background-position:50% 50%;
+			background-repeat: no-repeat;
+			
+			
+		}
+		@include at-breakpoint($large){
+			@include background-image(
+				linear-gradient(left, white, black)
+			);//background image
+			@include background(
+				linear-gradient(bottom left,rgba($darkerblue,0.7),rgba($darkerblue,0.7)),
+				image-url('misc/building-lg.jpg')
+
+			);//background
+			background-size:cover;
+			background-position:50% 50%;
+			background-repeat: no-repeat;
+
+			video{
+			
+				display:block;
+
+			}//video
+		
+		}//large size layout
+	}//hero class
+
+	nav{
+
+		position:fixed;
+		top:0;
+		width:100%;
+		z-index:100;
+		background-color:rgba(0,0,0,0.5);
+		
+		@include at-breakpoint($large){
+			
+			height:2em;
+			background:none;
+			position: absolute;
+			top:2em;
+			bottom: auto;
+
+		}//large size layout
+
+		#navi-bars{
+			
+			font-size:1.4em;
+			margin-top:0.3em;
+			color:$theme-gray;
+			cursor:pointer;
+			
+			&:hover{
+				
+				color:white;
+
+			}//hover navi bars
+
+			@include at-breakpoint($medium){
+				
+				font-size:1.8em;
+
+			}//medium size layout
+		
+			@include at-breakpoint($large){
+				
+				display:none;
+
+			}//large size layout 
+		}//navi bars
+
+		.nav{
+			
+			display: none;
+			width:100%;
+			
+			li{
+				
+				text-align:center;
+				padding:0.3em 10px;
+				border-bottom:$theme-black;
+
+				&:hover h3{
+					
+					color:white;
+
+				}//hover h3
+			}//li
+
+			li:nth-child(even){
+				
+				background-color:shade($theme-gray,70%);
+				
+				&:hover{
+				
+					background-color:$cyan;
+				
+				}//hover li for even
+
+				@include at-breakpoint($large){
+					
+					background-color:rgba($theme-gray,0.4);
+
+				}//large size layout
+			}//li for even
+			
+			li:nth-child(odd){
+				
+				background-color:shade($theme-gray,80%);
+				
+				&:hover{
+					
+					background-color:$cyan;
+
+				}//hover li for odd
+
+				@include at-breakpoint($large){
+					
+					background-color:rgba($theme-gray,0.4);
+
+				}//large size layout
+			}//li for odd
+
+			@include at-breakpoint($large){
+				
+				display:block;
+				position:absolute;
+
+				li{
+					
+					margin:0 0.2em;
+					width:6em;
+					display:inline-block;
+					
+					h3{
+						
+						font-size:0.7em;
+						color:shade(white,10);
+
+					}//h3
+				}//li
+			}//large size layout
+		}//ul.nav
+
+		//add this class to change the nav layout to fixed position
+		@include at-breakpoint($large){
+			.fixed_nav{
+				position:fixed;
+				top:0;;
+				background-color:rgba(0,0,0,0.5);
+				li{
+					background-color:initial!important;
+				}
+			}
+		}//large size layout
+	}//nav
+}//header
+
+
+
+#about-me{
+	
+	@include background(image-url('misc/coffee-gray-sm.jpg'));
+	padding-bottom:2em;
+	min-height:100%;
+	background-size:cover;
+	background-position:50% 50%;
+	background-repeat: no-repeat;
+	
+	@include at-breakpoint($medium){
+		@include background(image-url('misc/coffee-gray-md.jpg'));
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+
+	}//medium size layout
+
+
+	@include at-breakpoint($large){
+		@include background(image-url('misc/coffee-gray-lg.jpg'));
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+
+		.layout{
+			
+			min-width:80%;
+			
+			.element-wrapper{
+				
+				width:33%;
+				float:left;	
+
+			}//element wrapper
+		}//layout
+	}//large size layout
+
+
+	h2{
+		
+		@include text-shadow($darkblue 1px 1px);
+		margin:2em 0;
+		color:$theme-white;
+		
+	}//h2
+
+	.keywords{
+		
+		@include border-radius(10px);
+		padding:1.7em 0;
+		background-color:$transparent-darkblue;
+		overflow:auto;
+		
+		.element-wrapper{
+			.upper-side{
+				
+				width:70%;
+				height:11em;
+				margin:10px auto;
+				position:relative;
+
+				.circle-box{
+					
+					@include border-radius(100px);
+					width:10em;
+					height:10em;
+					background-color:darken($orange,0.7);
+					top:10px;right:0;left:0;bottom:0;
+					margin:auto;
+					position:absolute;
+					
+					.fa{
+						
+						margin-top: 0.7em;
+						font-size: 1.5em;
+
+					}//fa
+
+					h3{
+						
+						width: 93%;
+						height: 33%;
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						margin: auto;
+						font-size: 1.4em;
+
+					}//h3
+				}//circle-box
+				
+				#passion{
+					
+					background-color:darken($theme-green,0.7);
+				
+				}//passion
+
+				#learner{
+					background-color:darken($orange,0.7);
+					
+					h3{
+						
+						width:75%;
+
+					}//h3
+				}//learner
+
+				#communicator{
+					
+					background-color:darken($pink,0.7);
+					
+				}//communicator
+			}//upper side 
+
+			.hidden-description{
+				p{
+					
+					margin: 0.5em auto 3em;
+					width: 77%;
+					color:darken($theme-white,10);
+
+					a{
+						color:$paleyellow;
+						text-decoration:underline;
+						&:hover{
+							color:$blue;
+						}
+					}
+
+					.fa{
+						
+						color:adjust-lightness($gray,30%);
+
+					}//fa
+				}//p
+			}//hidden description
+		}//element wrapper
+	}//keywords
+}//about me
+
+#intro{
+	
+	@include background(
+		linear-gradient(bottom left,rgba($blue,0.3),rgba($darkerblue,0.8)),
+		image-url('misc/zero-v1.1-sm.jpg')
+	);//background
+	width:100%;
+	padding:1em 0 2em;	
+	min-height:100%;
+	background-size:cover;
+	background-position:50% 50%;
+	background-repeat: no-repeat;
+	
+	@include at-breakpoint($medium){
+		@include background(
+			linear-gradient(bottom left,rgba($blue,0.3),rgba($darkerblue,0.8)),
+			image-url('misc/zero-v1.1-sm.jpg')
+		);//background
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	@include at-breakpoint($medium){
+		@include background(
+			linear-gradient(bottom left,rgba($blue,0.3),rgba($darkerblue,0.8)),
+			image-url('misc/zero-v1.1-sm.jpg')
+		);//background
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	.layout{
+		
+		width:90%;
+		height:90%;		
+
+		.profile-picture{
+			
+			@include border-radius(120px);
+			@include background(
+				image-url('asset/profile-pic.jpg')
+			);//background
+			width: 12em;
+			height: 12em;
+			margin: 2em auto 1em;
+			display: block;
+			border:5px solid $yellow;
+			background-size:100%;
+
+		}//profile picture
+
+
+		p{
+			
+			@include border-radius(10px);
+			font-family:font-strong;
+			min-width:90%;
+			min-height:90%;
+			padding:1em;
+			margin:3em auto;
+			background-color:rgba($orange,0.5);
+			a{
+				color:lighten($blue,30);
+				
+				&:hover{
+					color:lighten($blue,0);
+					text-decoration: underline;
+				}
+			}
+			@include at-breakpoint($large){
+			
+				font-size:1.5em;
+				line-height:150%;
+			
+			}//large size layout
+		}//p
+	}//layout
+}//intro
+
+#blurred-effect{
+	@include background(
+		linear-gradient(bottom left,rgba($cyan,0.94),rgba($red,0.94))
+	);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+    top: 0;
+    display:none;
+
+    i{
+    	display:block!important;
+    	font-size:3em;
+    	right:0.3em;
+    	top:0.3em;
+    	position:fixed;
+    	cursor:pointer;
+
+    	&:hover{
+    		color:$cyan;
+    	}
+		
+    }
+}
+
+#skills{
+	
+	@include background(
+		linear-gradient(bottom left,rgba(darken($red,20),0.5),rgba($cyan,0.5)),
+		linear-gradient(top right,rgba($darkblue,0.7),rgba($orange,0.5)),
+		image-url('misc/abstract-shining-sm.jpg')
+	);//background
+	padding-bottom:2em;
+	min-height:100%;
+	background-position:50% 50%;
+	background-size:cover;
+	background-repeat: no-repeat;
+	
+	@include at-breakpoint($medium){
+		@include background(
+			linear-gradient(bottom left,rgba(darken($red,20),0.5),rgba($cyan,0.5)),
+			linear-gradient(top right,rgba($darkblue,0.7),rgba($orange,0.5)),
+			image-url('misc/abstract-shining-md.jpg')
+		);//background
+		background-size:cover;
+		background-repeat: no-repeat;
+	}
+	
+	@include at-breakpoint($large){
+		@include background(
+			linear-gradient(bottom left,rgba(darken($red,20),0.5),rgba($cyan,0.5)),
+			linear-gradient(top right,rgba($darkblue,0.7),rgba($orange,0.5)),
+			image-url('misc/abstract-shining-lg.jpg')
+		);//background
+		background-size:cover;
+		background-repeat: no-repeat;
+
+		.layout{
+			
+			min-width:80%;
+			
+			.column{
+				
+				margin:1em;
+
+			}//column
+		}//layout
+	}//large size layout
+	
+	h2{
+		
+		padding:1.5em 0;
+
+	}//h2
+	
+
+	.topic{
+		
+		@include border-top-radius(5px);
+		background-color:rgba(5,3,3,0.7);
+		width:12em;
+		height:3em;
+		margin:1em auto 0;
+		
+		h3{
+			
+			font-size: 0.9em;
+			padding-top: 0.3em;
+			font-family:$font-strong;
+			color:adjust-lightness($gray,10%);
+
+		}//h3
+
+		i{
+			
+			color:adjust-lightness($gray,10%);
+
+		}//i
+
+
+		@include at-breakpoint($medium){
+			
+			@include border-radius(10px);
+			width:40%!important;
+			height:3.5em!important;
+			margin-bottom:1em;
+
+		}// medium size 
+
+		@include at-breakpoint($large){
+			
+			background-color:initial;
+			
+			h3{
+				
+				color:white;
+
+			}//h3
+		}//large size layout
+	}//topic
+
+	//this is another topic
+	#other-skills{
+		
+		background-color:rgba(24, 14, 10, 0.8);
+		width:8em;
+		height:2em;
+		margin:2em auto 0;
+		
+		h3{
+			
+			font-size: 0.9em;
+			padding-top: 0.3em;
+			color:white;
+
+		}//h3
+
+		i{
+			
+			color:$red;
+
+		}//i			
+
+		@include at-breakpoint($large){
+			
+			background-color:initial;
+		
+		}
+	}//topic - other skill 
+
+	
+	.column{
+		
+		@include border-radius;
+		background-color:rgba(5,3,3,0.7);
+		padding:2em 0.5em 0;
+		.sub-title{
+			display:none;
+		}
+
+		li{
+			
+			padding:0 2%;
+			margin:1em 0;
+			position:relative;
+			
+			.graph-container{
+				@include border-radius(4px);
+				@include box-shadow($gray 0px 0px 5px);
+				position:relative;
+				background-color:lighten($theme-gray,2);
+				margin:0 auto;
+				width:100%;
+				height:25px;
+
+				
+				.familiarity{
+				
+					position:absolute;
+					left:0;
+					top:0;
+					height:100%;
+					padding:0 10px;
+					background-color:lighten($darkblue,30);
+					font-size:0.9em;
+					text-align: center;
+					display:none;
+
+				}
+
+				.graph-gauge{
+				
+					height:100%;
+					width:100%;
+					background-color:$blue;					
+					@include transition-property(height);
+					@include transition-duration(0.5s);
+  					@include transition-timing-function( cubic-bezier(x1, y1, x2, y2));  					
+
+				}//graph-gauge
+				
+				#html,#css,#sass,#firework{
+
+					width:80%;
+
+				}//#html,#css,#sass,#firework
+
+				#php,#mySql,#susy,#jquery,#photoshop{
+					
+					width:70%;
+
+				}//#php,#mySql,#susy,#jquery,#photoshop
+
+				#gruntJs,#imagick,#boostrap,#compass,#javascript{
+					
+					width:60%;
+
+				}//#gruntJs,#imagick,#boostrap,#compass,#javascript
+
+				#vb,#angular,#nodeJs,#mongoDb{
+					
+					width:20%;
+
+				}//#vb,#angular,#nodeJs,#mongoDb
+
+				@include at-breakpoint($medium){
+					&:hover{
+						span{
+							display:block;
+						}//span
+					}//hover
+				}//medium size layout
+			}//graph-container
+
+			.hidden-description{
+				
+				margin-top:1em;
+
+				i{
+					position:absolute;
+					top:-20px;
+					left:0;
+					right:0;
+					text-align: center;
+					color:red;
+					font-size:2em;
+					z-index:100;
+					display:block;
+				}//i
+				
+
+				p{
+					
+					font-size:0.8em;
+					
+					.box-header{
+						margin:0 auto;
+						color:darken($paleyellow,10);
+					}//box header
+
+					a{
+
+						@include border-radius;
+						padding:0.1em 0.4em;
+						margin:1em 0.2em 1em 0;
+						background-color:darken($red,10);
+						
+						&:hover{
+							background-color:$red;
+							color:white;
+						}//hover
+
+					}//a
+				}//p
+			}//hidden description
+
+		}//li
+
+		@include at-breakpoint($large){
+			
+			margin:0!important;
+			width:90%!important;
+			background-color:initial;
+
+			.hidden-description{
+				margin:auto!important;
+			}
+
+			li{
+				
+				@include border-radius(100px);
+				border:4px solid $darkblue;
+				width:8em;
+				height:8em;
+				display:inline-block;
+				position:relative;
+				margin:1em;
+				cursor:pointer;
+
+				h4{
+					font-weight:bold;
+					position:absolute;
+					top:0;right:0;bottom:0;left:0;
+					margin:auto;
+					text-align:center;
+					height:30%;
+
+				}//h4
+
+				h4.smaller{
+					font-size:0.8em;
+				}
+
+				.level.smaller{
+					font-size:0.6em!important;
+				}
+				
+				.graph-container{
+					@include border-radius(100px);
+					display:none;
+					width:100%;
+					height:100%;
+					position:absolute;
+					top:0;left:0;
+					z-index:100;
+					overflow:hidden;
+					
+					.graph-gauge{
+						position:absolute;
+						width:100%!important;
+						height:0;
+						
+						span{
+							top:20px;
+							background-color:initial;
+						}//span
+					}//graph gauge
+
+					&:hover{
+						
+						#html,#css,#sass,#firework{
+							height:80%;
+						}//#html,#css,#sass,#firework
+
+						#php,#mySql,#susy,#jquery,#photoshop{
+							height:70%;
+						}//#php,#mySql,#susy,#jquery,#photoshop
+
+						#gruntJs,#imagick,#boostrap,#compass,#javascript{
+							height:60%;
+						}//#gruntJs,#imagick,#boostrap,#compass,#javascript
+
+						#vb,#angular,#nodeJs,#mongoDb{
+							height:20%;
+							span{
+								color:$darkerblue;
+							}
+						}//#vb,#angular,#nodeJs,#mongoDb							
+					
+					}//hover 
+				}
+
+				&:hover{
+					
+					.graph-container{
+					
+						display:block;
+					
+					}
+
+				}
+
+				.level-box{
+					@include border-radius(70px);
+					@include opacity(0);
+					@include transition-property(all);
+					@include transition-duration(0.5s);
+  					@include transition-timing-function( cubic-bezier(x1, y1, x2, y2));  					
+					position: absolute;
+					top:0;right:0;left:0;bottom:0;
+					margin:0;
+					
+					
+
+					i{
+						display:none;
+					}
+					.level{
+						text-align: center;
+						width:80%;
+						height:50%;
+						font-size:0.8em;
+						position: absolute;
+						top:0;right:0;left:0;bottom:0;
+						margin:auto;
+					}
+					
+				}
+
+
+
+			}//li
+
+			li:nth-child(6n+1){
+				background-color:rgba($red,0.9);
+			}
+
+			li:nth-child(6n+2){
+				background-color:rgba($blue,0.9);	
+			}
+
+			li:nth-child(6n+3){
+				background-color:rgba($orange,0.9);
+			}
+
+			li:nth-child(6n+4){	
+				background-color:rgba($cyan,0.9);
+				
+			}
+
+			li:nth-child(6n+5){	
+				background-color:rgba($purple,0.9);
+			}
+
+			li:nth-child(6n+6){	
+				background-color:rgba($yellow,0.9);
+			}
+
+		}//large size layout
+	}//column
+
+	//type a column
+	.type-a{
+		@include at-breakpoint($medium){
+			
+			margin:0 auto;
+			width:45%;
+			display:inline-block;	
+
+		}//medium device
+
+
+		@include at-breakpoint($large){
+			
+			padding:0;
+
+		}//large size layout
+	}//type-a column
+
+	.type-a:nth-child(even){
+		
+		margin-top:-1.5em;
+
+	}//type-a nth-child for even
+	
+	//type b column
+	.type-b{
+		
+		padding-bottom:1em;
+		background-color:rgba(24, 14, 10, 0.8);
+		
+		li{
+			cursor:default!important;
+
+			@include at-breakpoint($large){
+
+				&:nth-child(6n+1){
+					background-color:darken($gray,0);
+				}
+				&:nth-child(6n+2){
+					background-color:darken($gray,10);	
+				}
+				&:nth-child(6n+3){
+					background-color:darken($gray,20);
+				}
+				&:nth-child(6n+4){
+					background-color:darken($gray,30);
+				}
+				&:nth-child(6n+5){
+					background-color:darken($gray,40);
+				}
+				&:nth-child(6n+6){
+					background-color:darken($gray,50);
+				}
+			}
+
+		}
+
+		.level-box{			
+			
+			margin:0.5em auto;
+			padding:0.6em;
+			background-color:rgb(46,80,100);
+			position:relative;
+			@include border-radius(10px);
+			
+			i{
+				
+				position:absolute;
+				top:-40px;
+				color:rgb(46,80,100);
+				font-size:4em;
+
+			}//i
+
+			p{
+				
+				font-size:0.7em;
+				color:darken($theme-white,8);
+
+			}//p
+		}//level box
+
+		@include at-breakpoint($medium){
+			margin-top:1em;
+			width:90%;
+			display:inline-block;	
+		}//breakpoint
+		
+		@include at-breakpoint($large){
+			
+			background-color:initial;
+		
+			li:hover .level-box{				
+				@include opacity(1);
+			}
+		}//large size layout
+	}//type-b
+}//skill
+
+#portfolio{
+	
+	@include background(
+		linear-gradient(bottom left,rgba($orange,0.5),rgba($blue,0.5)),
+		image-url('misc/nyc-v1-sm.jpg')
+	);//background
+	position:relative;
+	background-size:cover;
+	background-position:50% 50%;
+	background-repeat: no-repeat;
+	min-height:100%;
+	width:100%;
+	padding-bottom:5em;
+
+	@include at-breakpoint($medium){
+		@include background(
+			linear-gradient(bottom left,rgba($orange,0.5),rgba($blue,0.5)),
+			image-url('misc/nyc-v1-md.jpg')
+		);//background
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	@include at-breakpoint($large){
+		@include background(
+			linear-gradient(bottom left,rgba($orange,0.5),rgba($blue,0.5)),
+			image-url('misc/nyc-v1-lg.jpg')
+		);//background
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	.layout{
+		
+		h2{
+			z-index:1;
+			margin:2em;
+		}//h2
+
+		.list-of-creations{
+			
+			z-index:1;
+
+			.creation{
+				
+				display:inline-block;
+				position:relative;
+				@include border-radius(50px);
+				width:12em;
+				margin:1em;
+				position: relative;
+				
+				
+				a{
+					width:100%;
+					height:100%;
+
+					img{
+						
+						@include border-radius(150px);
+						width:100%;
+						height:100%;
+
+					}//img
+
+					.edited{
+						position:absolute;
+						right:0;
+						left:0;
+						top:0;
+						bottom:0;
+						display:none;
+						width:100%;
+						height:100%;
+						margin:auto;
+
+					}//edited
+
+					.popup-slides{
+
+						display:none;
+						width:100%;
+						height:100%;
+						@include border-radius(150px);
+						background-color:rgba(black,0.8);
+						position:absolute;
+						top:0;
+
+					}//popup slides
+
+					h3{
+
+						height:20%;
+						width:80%;
+						font-size:2em;
+						color:adjust-lightness($cyan,30%);
+						position:absolute;
+						top:0;right:0;bottom:0;left:0;
+						margin:auto;
+						
+					}//h3
+
+				}//a
+			}//creation
+		}//list of creation
+
+		.additional-button{
+			
+			@include border-radius;
+			position:absolute;
+			bottom:3em;right:0;left:0;
+			width:13em;
+			margin:0 auto;
+			background-color:rgba($theme-gray,0.2);
+			
+			a{
+				color:shade(white,30);
+				@include text-shadow(1px 1px $darkerblue);
+			}//a
+
+			&:hover a{
+				color:white;
+
+			}//a hover
+		}//additional button
+	}//layout
+}//portfolio
+
+
+#education{
+	@include background(
+		linear-gradient(top left,rgba($darkerblue,0.8),rgba($paleryellow,0.8)),
+		image-url('misc/coffee-paleyellow-sm.jpg')
+	);
+	min-height:100%;
+	padding-bottom:2em;
+	background-size:cover;
+	background-position:50% 50%;
+	background-repeat: no-repeat;
+	
+	@include at-breakpoint($medium){
+		@include background(
+			linear-gradient(top left,rgba($darkerblue,0.8),rgba($paleryellow,0.8)),
+			image-url('misc/coffee-paleyellow-md.jpg')
+		);
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+	}
+	
+	@include at-breakpoint($large){
+		@include background(
+			linear-gradient(top left,rgba($darkerblue,0.2),rgba($paleryellow,0.8)),
+			image-url('misc/coffee-paleyellow-lg.jpg')
+		);
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	h2{
+		
+		margin:1.5em;
+
+	}//h2
+
+	h3{
+		
+		font-family:$font-normal;
+
+	}//h3
+
+	.school{
+		
+		text-align: left;
+		margin:0.5em;
+		padding:1em;
+		background-color:rgba(100,100,20,0.4);
+		color:darken(white,10);
+		
+		.status-time{
+			
+			font-size:0.7em;
+		
+		}//status time
+
+		h4{
+			
+			padding:1em 0;
+			font-size:0.95em;
+
+		}//h4
+	}//school
+}//education
+
+#work{
+	
+	@include background(
+		linear-gradient(bottom left,rgba(black,0.9),rgba($darkerblue,0.9)),
+		image-url('misc/snow-sm.jpg')
+	);//background
+	min-height:100%;
+	padding-bottom:2em;
+	background-size:cover;
+	background-position:50% 50%;
+	background-repeat: no-repeat;
+	
+	@include at-breakpoint($medium){
+		@include background(
+			linear-gradient(bottom left,rgba(black,0.9),rgba($darkerblue,0.9)),
+			image-url('misc/snow-md.jpg')
+		);//background
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	@include at-breakpoint($large){
+		@include background(
+			linear-gradient(bottom left,rgba($purple,0.4),rgba($orange,0.6)),
+			image-url('misc/snow-lg.jpg')
+		);//background
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	h2{
+		
+		font-size:1.8em;
+		margin:1.5em 0;
+
+	}//h2
+
+	.companies{
+		
+		@include border-radius;
+		text-align: left;
+		margin:1em 0.5em;
+		padding:1em;
+		background-color:rgba($mediumgray,0.9);
+		color:darken(white,10);
+		
+		h3{
+			margin-bottom:0.5em;
+			font-family:$font-normal;
+		}//h3
+
+		.status-time{
+			font-size:0.6em;
+			float:right;
+			@include at-breakpoint($medium){
+				font-size:0.8em;
+			}
+		}//status time
+	
+		.position{
+			
+			font-size:0.8em;
+			
+			@include at-breakpoint($medium){
+				font-size:0.9em;
+			}//medium size layout
+		
+		}//position
+
+		li{
+			
+			font-size:0.8em;
+			list-style-type:square;
+			margin:0.5em;
+
+		}//li
+	}//companies
+	.additional-button{
+			
+		@include border-radius;
+		width:13em;
+		margin:3em auto 1em;
+		background-color:rgba($theme-gray,0.2);
+		
+		a{
+			color:shade(white,30);
+			@include text-shadow(1px 1px $darkerblue);
+		}//a
+
+		&:hover a{
+			color:white;
+
+		}//a hover
+	}//additional button
+}//work
+
+#contact{
+	height:100%;
+	@include background(
+		linear-gradient(bottom left,rgba($blue,0.5),rgba($cyan,0.6)),
+		image-url('misc/nyc-v2-sm.jpg')
+	);//background
+	background-size:cover;
+	background-position:50% 50%;
+	background-repeat: no-repeat;
+	position:relative;
+	min-height:500px;
+
+	@include at-breakpoint($medium){
+		@include background(
+			linear-gradient(bottom left,rgba($blue,0.5),rgba($cyan,0.6)),
+			image-url('misc/nyc-v2-md.jpg')
+		);//background
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+	}
+	
+	@include at-breakpoint($large){
+		@include background(
+			linear-gradient(bottom left,rgba($blue,0.5),rgba($cyan,0.6)),
+			image-url('misc/nyc-v2-lg.jpg')
+		);//background
+		background-size:cover;
+		background-position:50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	.layout{
+		
+		height:80%;
+		width:95%;
+		position:absolute;
+		top:0;right:0;bottom:0;left:0;
+		margin:auto;
+		
+		h2{
+			margin:2em 0;
+		}//h2
+	
+		.contact-icons{
+			
+			padding:3em 0;
+			
+			li{
+				
+				font-size:5em;
+				display:inline;
+
+				a:hover{
+					color:shade(lighten($orange,20),10%);
+				}//a hover
+			}//li
+		}//contact icons
+	}//layout
+}//contact
+
+footer{
+	padding:0.2em 0;
+	color:$darkgray;
+	font-size:0.8em;
+	background-color:darken($darkblue,10);
+}//footer
+
