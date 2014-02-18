@@ -13,17 +13,28 @@
 	<meta name="author" content="zhengdian zhan, masanori sen">
 	<!--[if IE]>
    
-   <style type="text/css">
+	   	<style type="text/css">
 
-   .color-block { 
-       background:transparent;
-       filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50990000,endColorstr=#50990000); 
-       zoom: 1;
-    } 
+		   .color-block { 
+		       background:transparent;
+		       filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50990000,endColorstr=#50990000); 
+		       zoom: 1;
+		    } 
 
-    </style>
-
-<![endif]-->
+	    </style>
+		
+		//Create HTML5 elements for IE
+	 	
+	 	<script>
+			document.createElement("article");
+			document.createElement("nav");
+			document.createElement("section");
+			document.createElement('video');
+			document.createElement("footer");
+			document.createElement("header");
+		</script>
+	
+	<![endif]-->
 </head>
 <body>
 	<header>

@@ -1,12 +1,3 @@
-// // Create HTML5 elements for IE
-// <!--[if lt IE 9]>
-// document.createElement("article");
-// document.createElement("section");
-// document.createElement('video');
-
-// <![endif]-->
-//--------Jquery-----------//
-
 //*navi*
 
 $(function(){
