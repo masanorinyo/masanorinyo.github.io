@@ -1,0 +1,33 @@
+#intro{
+	@include background(image-url('misc/zero-v1.1-sm.jpg'));//background
+}
+
+#blurred-effect{
+	background-color:rgba(0,0,0,0.7);
+}
+
+#skills{
+	@include background(image-url('misc/abstract-shining-sm.jpg'));//background
+}
+
+#portfolio{
+	@include background(image-url('misc/nyc-v1-sm.jpg'));//background
+}
+
+#education{
+	@include background(image-url('misc/coffee-paleyellow-sm.jpg'));
+}
+
+#work{
+	@include background(image-url('misc/snow-sm.jpg'));//background
+}
+
+#contact{
+	@include background(image-url('misc/nyc-v2-sm.jpg'));//background
+}
+
+.color-block{ 
+   background:transparent;
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50990000,endColorstr=#50990000); 
+   zoom: 1;
+} 
