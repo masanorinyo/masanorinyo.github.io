@@ -45,10 +45,8 @@ header{
 		position:relative;
 		height:100%;
 		width:100%;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/building-sm.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/building-sm.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
+		
 		span{
 			
 			font-size:0.7em;
@@ -107,10 +105,9 @@ header{
 			background-size:cover;
 			background-position:50% 50%;
 			background-repeat: no-repeat;
-			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/building-md.jpg', sizingMethod='scale');
-			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/building-md.jpg', sizingMethod='scale')";
-			background-color:transparent;
-			display:block;
+			
+			
+			
 			
 		}
 		@include at-breakpoint($large){
@@ -125,10 +122,7 @@ header{
 			background-size:cover;
 			background-position:50% 50%;
 			background-repeat: no-repeat;
-			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/building-lg.jpg', sizingMethod='scale');
-			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/building-lg.jpg', sizingMethod='scale')";
-			background-color:transparent;
-			display:block;
+			
 			video{
 			
 				display:block;
@@ -279,19 +273,13 @@ header{
 	background-size:cover;
 	background-position:50% 50%;
 	background-repeat: no-repeat;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-gray-sm.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-gray-sm.jpg', sizingMethod='scale')";
-	background-color:transparent;
-	display:block;
+	
 	@include at-breakpoint($medium){
 		@include background(image-url('misc/coffee-gray-md.jpg'));
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-gray-md.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-gray-md.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 	}//medium size layout
 
 
@@ -300,10 +288,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-gray-lg.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-gray-lg.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 		.layout{
 			
 			min-width:80%;
@@ -434,10 +419,7 @@ header{
 	background-size:cover;
 	background-position:50% 50%;
 	background-repeat: no-repeat;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/zero-v1.1-sm.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/zero-v1.1-sm.jpg', sizingMethod='scale')";
-	background-color:transparent;
-	display:block;
+	
 	@include at-breakpoint($medium){
 		@include background(
 			linear-gradient(bottom left,rgba($blue,0.3),rgba($darkerblue,0.8)),
@@ -446,10 +428,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/zero-v1.1-md.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/zero-v1.1-md.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 	}
 
 	@include at-breakpoint($medium){
@@ -460,10 +439,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/zero-v1.1-lg.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/zero-v1.1-lg.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 	}
 
 	.layout{
@@ -524,7 +500,7 @@ header{
 	z-index: 100;
     top: 0;
     display:none;
-	background-color:transparent;
+	
 		
     i{
     	display:block!important;
@@ -553,10 +529,7 @@ header{
 	background-position:50% 50%;
 	background-size:cover;
 	background-repeat: no-repeat;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/abstract-shining-sm.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/abstract-shining-sm.jpg', sizingMethod='scale')";
-	background-color:transparent;
-	display:block;
+	
 	@include at-breakpoint($medium){
 		@include background(
 			linear-gradient(bottom left,rgba(darken($red,20),0.5),rgba($cyan,0.5)),
@@ -565,10 +538,7 @@ header{
 		);//background
 		background-size:cover;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/abstract-shining-md.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/abstract-shining-md.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 	}
 	
 	@include at-breakpoint($large){
@@ -579,10 +549,7 @@ header{
 		);//background
 		background-size:cover;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/abstract-shining-lg.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/abstract-shining-lg.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 		.layout{
 			
 			min-width:80%;
@@ -1069,10 +1036,7 @@ header{
 	min-height:100%;
 	width:100%;
 	padding-bottom:5em;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/nyc-v1-sm.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/nyc-v1-sm.jpg', sizingMethod='scale')";
-	background-color:transparent;
-	display:block;
+	
 	@include at-breakpoint($medium){
 		@include background(
 			linear-gradient(bottom left,rgba($orange,0.5),rgba($blue,0.5)),
@@ -1081,10 +1045,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/nyc-v1-md.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/nyc-v1-md.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 	}
 
 	@include at-breakpoint($large){
@@ -1095,10 +1056,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/nyc-v1-lg.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/nyc-v1-lg.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 	}
 
 	.layout{
@@ -1208,10 +1166,7 @@ header{
 	background-size:cover;
 	background-position:50% 50%;
 	background-repeat: no-repeat;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-paleyellow-sm.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-paleyellow-sm.jpg', sizingMethod='scale')";
-	background-color:transparent;
-	display:block;
+	
 	
 	@include at-breakpoint($medium){
 		@include background(
@@ -1221,10 +1176,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-paleyellow-md.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-paleyellow-md.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 	}
 	
 	@include at-breakpoint($large){
@@ -1235,10 +1187,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-paleyellow-lg.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/coffee-paleyellow-lg.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 	}
 
 	h2{
@@ -1287,10 +1236,7 @@ header{
 	background-size:cover;
 	background-position:50% 50%;
 	background-repeat: no-repeat;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/snow-sm.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/snow-sm.jpg', sizingMethod='scale')";
-	background-color:transparent;
-	display:block;
+	
 
 	@include at-breakpoint($medium){
 		@include background(
@@ -1300,10 +1246,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/snow-md.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/snow-md.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 	}
 
 	@include at-breakpoint($large){
@@ -1314,10 +1257,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/snow-lg.jpg', sizingMethod='scale');
-		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='misc/snow-lg.jpg', sizingMethod='scale')";
-		background-color:transparent;
-		display:block;
+		
 	}
 
 	h2{
@@ -1397,8 +1337,7 @@ header{
 	background-repeat: no-repeat;
 	position:relative;
 	min-height:500px;
-	background-color:transparent;
-	display:block;
+	
 	
 	@include at-breakpoint($medium){
 		@include background(
@@ -1408,8 +1347,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		background-color:transparent;
-		display:block;
+		
 	}
 	
 	@include at-breakpoint($large){
@@ -1420,8 +1358,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-repeat: no-repeat;
-		background-color:transparent;
-		display:block;
+		
 	}
 
 	.layout{

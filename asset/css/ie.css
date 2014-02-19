@@ -1,29 +1,55 @@
 #intro{
-	background-image:url('images/misc/zero-v1.1-lg.jpg')!important;//background
+	background-image:url('../../images/misc/zero-v1.1-lg.jpg')!important;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/zero-v1.1-sm.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/zero-v1.1-sm.jpg', sizingMethod='scale')";
+	background-color:transparent;
+	display:block;
 }
 
 #blurred-effect{
 	background-color:rgba(0,0,0,0.7);
+	background-color:transparent;
+
 }
 
 #skills{
-	background-image:url('images/misc/abstract-shining-sm.jpg')!important;//background
+	background-image:url('../../imagesimages/misc/abstract-shining-lg.jpg')!important;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/abstract-shining-lg.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/abstract-shining-lg.jpg', sizingMethod='scale')";
+	background-color:transparent;
+	display:block;
 }
 
 #portfolio{
-	background-image:url('misc/nyc-v1-sm.jpg')!important;//background
+	background-image:url('../../imagesmisc/nyc-v1-lg.jpg')!important;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/nyc-v1-lg.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/nyc-v1-lg.jpg', sizingMethod='scale')";
+	background-color:transparent;
+	display:block;
 }
 
 #education{
-	background-image:url('misc/coffee-paleyellow-sm.jpg')!important;
+	background-image:url('../../imagesmisc/coffee-paleyellow-lg.jpg')!important;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/coffee-paleyellow-lg.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/coffee-paleyellow-lg.jpg', sizingMethod='scale')";
+	background-color:transparent;
+	display:block;
 }
 
 #work{
-	background-image:url('misc/snow-sm.jpg')!important;//background
+	background-image:url('../../imagesmisc/snow-lg.jpg')!important;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/snow-lg.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/snow-lg.jpg', sizingMethod='scale')";
+	background-color:transparent;
+	display:block;
 }
 
 #contact{
-	background-image:url('misc/nyc-v2-sm.jpg')!important;//background
+	background-image:url('../../imagesmisc/nyc-v2-lg.jpg')!important;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/nyc-v2-lg.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/nyc-v2-lg.jpg', sizingMethod='scale')";
+	background-color:transparent;
+	display:block;
 }
 
 .color-block{ 
