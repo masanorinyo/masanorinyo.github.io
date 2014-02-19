@@ -1,5 +1,5 @@
 #intro{
-	@include background(image-url('misc/zero-v1.1-sm.jpg'));//background
+	background-image:url('images/misc/zero-v1.1-lg.jpg')!important;//background
 }
 
 #blurred-effect{
@@ -7,23 +7,23 @@
 }
 
 #skills{
-	@include background(image-url('misc/abstract-shining-sm.jpg'));//background
+	background-image:url('images/misc/abstract-shining-sm.jpg')!important;//background
 }
 
 #portfolio{
-	@include background(image-url('misc/nyc-v1-sm.jpg'));//background
+	background-image:url('misc/nyc-v1-sm.jpg')!important;//background
 }
 
 #education{
-	@include background(image-url('misc/coffee-paleyellow-sm.jpg'));
+	background-image:url('misc/coffee-paleyellow-sm.jpg')!important;
 }
 
 #work{
-	@include background(image-url('misc/snow-sm.jpg'));//background
+	background-image:url('misc/snow-sm.jpg')!important;//background
 }
 
 #contact{
-	@include background(image-url('misc/nyc-v2-sm.jpg'));//background
+	background-image:url('misc/nyc-v2-sm.jpg')!important;//background
 }
 
 .color-block{ 
