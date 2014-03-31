@@ -409,13 +409,13 @@ header{
 
 #intro{
 	
+	width:100%;
+	padding:1em 0 2em;	
+	min-height:100%;
 	@include background(
 		linear-gradient(bottom left,rgba($blue,0.3),rgba($darkerblue,0.8)),
 		image-url('misc/zero-v1.1-sm.jpg')
 	);//background
-	width:100%;
-	padding:1em 0 2em;	
-	min-height:100%;
 	background-size:cover;
 	background-position:50% 50%;
 	background-repeat: no-repeat;
@@ -518,14 +518,13 @@ header{
 }
 
 #skills{
-	
+	padding-bottom:2em;
+	min-height:100%;
 	@include background(
 		linear-gradient(bottom left,rgba(darken($red,20),0.5),rgba($cyan,0.5)),
 		linear-gradient(top right,rgba($darkblue,0.7),rgba($orange,0.5)),
 		image-url('misc/abstract-shining-sm.jpg')
 	);//background
-	padding-bottom:2em;
-	min-height:100%;
 	background-position:50% 50%;
 	background-size:cover;
 	background-repeat: no-repeat;

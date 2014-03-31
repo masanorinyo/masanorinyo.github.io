@@ -1,9 +1,15 @@
 #intro{
 	background-image:url('../../images/misc/zero-v1.1-lg.jpg')!important;
+	padding-bottom:2em;
+	min-height:100%;
+	background-size:cover;
+	background-position:50% 50%;
+	background-repeat: no-repeat;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/zero-v1.1-sm.jpg', sizingMethod='scale');
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imagesmisc/zero-v1.1-sm.jpg', sizingMethod='scale')";
 	background-color:transparent;
 	display:block;
+		
 }
 
 #blurred-effect{
