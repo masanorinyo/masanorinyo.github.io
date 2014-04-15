@@ -1389,6 +1389,19 @@ header{
 	}//layout
 }//contact
 
+.comment-wrapper{
+	padding:1em;
+
+	@include at-breakpoint($medium){
+		padding:5em;
+	}
+
+	@include at-breakpoint($large){
+		padding:10em;
+	}
+}
+
+
 footer{
 	padding:0.2em 0;
 	color:$darkgray;
