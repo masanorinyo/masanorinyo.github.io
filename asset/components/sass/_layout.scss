@@ -1090,8 +1090,12 @@ header{
 				position:relative;
 				
 				&.larger{
-					width:22em;
+					width:90%;
 					margin:1em 1em;
+
+					@include at-breakpoint($medium){
+						width:43%;
+					}
 
 					h3{
 						height:20%;
